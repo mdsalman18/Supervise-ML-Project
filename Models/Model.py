@@ -12,7 +12,6 @@ def Encode(features):
         le = LabelEncoder()
         df[col] = le.fit_transform(df[col])
         label_encoding[col] =le
-    
     return label_encoding
 
 # Dataset loading
