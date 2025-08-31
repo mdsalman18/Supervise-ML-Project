@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home - Customer Churn Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Churn Predictor</div>
+    <ul>
+      <li><a href="{{ url_for('dashboard') }}"><i class="fa fa-chart-line"></i> Dashboard</a></li>
+      <li><a href="{{ url_for('login') }}"><i class="fa fa-sign-in-alt"></i> Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-wrapper">
+    <h1 class="form-title">Customer Churn Prediction</h1>
+
+    <div class="container">
+      <div class="form-box" style="max-width: 900px; text-align: left;">
+        <h2>About the Project</h2>
+        <p>
+          This project helps telecom companies predict whether a customer will <strong>churn</strong> (leave) or <strong>stay</strong>. It collects customer data and uses machine learning to provide predictions based on behavior and usage patterns.
+        </p>
+
+        <h2>Objectives</h2>
+        <ul>
+          <li>Collect relevant customer data through a user-friendly form</li>
+          <li>Analyze the data using predictive models</li>
+          <li>Classify each customer as likely to churn or not churn</li>
+        </ul>
+
+        <h2>How It Works</h2>
+        <ol>
+          <li>User enters customer details in the form</li>
+          <li>Form data is sent to a backend model</li>
+          <li>The model returns a prediction: <em>Churn</em> or <em>Not Churn</em></li>
+        </ol>
+
+        <h2>Technologies Used</h2>
+        <ul>
+          <li>HTML, CSS, JavaScript for frontend</li>
+          <li>Python and Machine Learning models</li>
+          <li>Flask for backend integration</li>
+        </ul>
+
+        <h2>Who Can Use This?</h2>
+        <p>
+          Business analysts, telecom operators, and developers looking to understand and prevent customer churn can use this tool.
+        </p>
+
+        <p style="margin-top: 30px;">
+          <a href="{{ url_for('dashboard') }}" style="color: #4b0082; font-weight: bold; text-decoration: underline;">→ Go to Customer Form</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

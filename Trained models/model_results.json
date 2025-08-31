@@ -1,0 +1,27 @@
+[
+    {
+        "Model name": "Logistic Regression",
+        "Accuracy": 0.8176011355571328,
+        "Saved Model File": "Trained models/Logistic_Regression_model.pkl"
+    },
+    {
+        "Model name": "K Nearest Neighbour",
+        "Accuracy": 0.7650816181689141,
+        "Saved Model File": "Trained models/KNN_model.pkl"
+    },
+    {
+        "Model name": "Random Forest",
+        "Accuracy": 0.7934705464868701,
+        "Saved Model File": "Trained models/RandomForest_model.pkl"
+    },
+    {
+        "Model name": "Support Vector Classifier",
+        "Accuracy": 0.8133427963094393,
+        "Saved Model File": "Trained models/SVC_model.pkl"
+    },
+    {
+        "Model name": "XGBoost Classifier",
+        "Accuracy": 0.794180269694819,
+        "Saved Model File": "Trained models/XGBoost_model.pkl"
+    }
+]
