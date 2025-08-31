@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Customer Churn Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="main-wrapper">
+    <h1 class="form-title">Customer Churn Prediction Form</h1>
+
+    <div class="container">
+      <div class="form-box">
+        <h2>Enter customer details to predict churn</h2>
+
+        <form method="POST" action="{{ url_for('dashboard') }}">
+          <div class="section-grid">
+
+            <!-- customerID -->
+            <div class="input-group">
+              <input type="text" name="customerID" placeholder="Customer ID" required />
+              <i class="fa fa-id-badge"></i>
+            </div>
+
+            <!-- gender -->
+            <div class="input-group">
+              <select name="gender" required>
+                <option value="">Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+              <i class="fa fa-venus-mars"></i>
+            </div>
+
+            <!-- SeniorCitizen -->
+            <div class="input-group">
+              <select name="SeniorCitizen" required>
+                <option value="">Senior Citizen?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+              <i class="fa fa-user"></i>
+            </div>
+
+            <!-- Partner -->
+            <div class="input-group">
+              <select name="Partner" required>
+                <option value="">Partner</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <i class="fa fa-handshake"></i>
+            </div>
+
+            <!-- Dependents -->
+            <div class="input-group">
+              <select name="Dependents" required>
+                <option value="">Dependents</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <i class="fa fa-users"></i>
+            </div>
+
+            <!-- tenure -->
+            <div class="input-group">
+              <input type="number" name="tenure" placeholder="Tenure (in months)" required />
+              <i class="fa fa-calendar"></i>
+            </div>
+
+            <!-- PhoneService -->
+            <div class="input-group">
+              <select name="PhoneService" required>
+                <option value="">Phone Service</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <i class="fa fa-phone"></i>
+            </div>
+
+            <!-- MultipleLines -->
+            <div class="input-group">
+              <select name="MultipleLines" required>
+                <option value="">Multiple Lines</option>
+                <option>No phone service</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <i class="fa fa-network-wired"></i>
+            </div>
+
+            <!-- InternetService -->
+            <div class="input-group">
+              <select name="InternetService" required>
+                <option value="">Internet Service</option>
+                <option>DSL</option>
+                <option>Fiber optic</option>
+                <option>No</option>
+              </select>
+              <i class="fa fa-wifi"></i>
+            </div>
+
+            <!-- OnlineSecurity -->
+            <div class="input-group">
+              <select name="OnlineSecurity" required>
+                <option value="">Online Security</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>No internet service</option>
+              </select>
+              <i class="fa fa-shield-alt"></i>
+            </div>
+
+            <!-- OnlineBackup -->
+            <div class="input-group">
+              <select name="OnlineBackup" required>
+                <option value="">Online Backup</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>No internet service</option>
+              </select>
+              <i class="fa fa-cloud-upload-alt"></i>
+            </div>
+
+            <!-- DeviceProtection -->
+            <div class="input-group">
+              <select name="DeviceProtection" required>
+                <option value="">Device Protection</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>No internet service</option>
+              </select>
+              <i class="fa fa-mobile-alt"></i>
+            </div>
+
+            <!-- TechSupport -->
+            <div class="input-group">
+              <select name="TechSupport" required>
+                <option value="">Tech Support</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>No internet service</option>
+              </select>
+              <i class="fa fa-headset"></i>
+            </div>
+
+            <!-- StreamingTV -->
+            <div class="input-group">
+              <select name="StreamingTV" required>
+                <option value="">Streaming TV</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>No internet service</option>
+              </select>
+              <i class="fa fa-tv"></i>
+            </div>
+
+            <!-- StreamingMovies -->
+            <div class="input-group">
+              <select name="StreamingMovies" required>
+                <option value="">Streaming Movies</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>No internet service</option>
+              </select>
+              <i class="fa fa-film"></i>
+            </div>
+
+            <!-- Contract -->
+            <div class="input-group">
+              <select name="Contract" required>
+                <option value="">Contract</option>
+                <option>Month-to-month</option>
+                <option>One year</option>
+                <option>Two year</option>
+              </select>
+              <i class="fa fa-file-contract"></i>
+            </div>
+
+            <!-- PaperlessBilling -->
+            <div class="input-group">
+              <select name="PaperlessBilling" required>
+                <option value="">Paperless Billing</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <i class="fa fa-file-invoice-dollar"></i>
+            </div>
+
+            <!-- PaymentMethod -->
+            <div class="input-group">
+              <select name="PaymentMethod" required>
+                <option value="">Payment Method</option>
+                <option>Electronic check</option>
+                <option>Mailed check</option>
+                <option>Bank transfer (automatic)</option>
+                <option>Credit card (automatic)</option>
+              </select>
+              <i class="fa fa-money-check"></i>
+            </div>
+
+            <!-- MonthlyCharges -->
+            <div class="input-group">
+              <input type="number" name="MonthlyCharges" step="0.01" placeholder="Monthly Charges" required />
+              <i class="fa fa-dollar-sign"></i>
+            </div>
+
+            <!-- TotalCharges -->
+            <div class="input-group">
+              <input type="number" name="TotalCharges" step="0.01" placeholder="Total Charges" required />
+              <i class="fa fa-credit-card"></i>
+            </div>
+          </div>
+          <!-- Prediction Result -->
+          {% if prediction_result %}
+          <div class="result-box">
+            <p class="result-message">
+              Prediction Result: <strong>{{ prediction_result }}</strong>
+            </p>
+          </div>
+          {% endif %}
+
+          <!-- Submit -->
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
